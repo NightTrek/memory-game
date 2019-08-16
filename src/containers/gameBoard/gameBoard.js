@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 // import PropTypes from 'prop-types';
 
 // import TileOptions from "../../../public/ClickyOptions"
@@ -126,16 +126,20 @@ class GameBoard extends Component {
                         <Column small={12}>
                             {/*+++++++++++++++++++  Game Board start ++++++++++++++++++++++++++++++++++++++++++++++++*/}
                             <Row>
-                                {this.state.imgSrcArray.map((url,index)=>{
-                                    console.log(url)
+                                {this.state.imgSrcArray.map((url, index)=>{
+                                    console.log(index)
+                                    console.log(typeof index);
                                     console.log("=============")
                                     if(index<9) {
                                         return (
                                             <Column key={index} small={4} large={4}>
 
-                                                <GameTiles src={url}/>
+                                                <GameTiles index={index} src={url}/>
                                             </Column>
                                         )
+                                    }
+                                    else{
+                                        return
                                     }
                                 })}
                             </Row>

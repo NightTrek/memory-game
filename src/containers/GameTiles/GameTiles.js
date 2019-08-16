@@ -8,9 +8,24 @@ class GameTiles extends Component {
             imgSRC:props.src,
             clicked:false
         }
+
+        //sephan martelli
+        //daria friend
+        //
+        //
+        //kieren hyland
+        //
+        //frank z
+        //
+        //probebly
+        //707-338-0671
+        //
+        //
+        this.handleClick = this.handleClick.bind(this);
     }
     handleClick(){
-        console.log('you clicked a Tile')
+        console.log(this.props);
+        console.log(`you clicked tile ${this.props.index}`);
         // if(this.state.clicked === false) {
         //     this.setState((prevState, props) => {
         //         return {
